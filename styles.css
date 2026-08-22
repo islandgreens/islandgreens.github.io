@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
+  color-scheme: light;
   --water-deep: #0F2E33;
   --water-mid: #17434A;
   --water-line: #2C5B60;
@@ -591,7 +592,7 @@ h1.article-title {
   .article-header { padding: 36px 0 28px; }
   .article-body { padding: 36px 0 48px; }
 
-  .scorecard { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .scorecard { overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
   .scorecard-head, .scorecard-row { grid-template-columns: 130px 165px 165px; font-size: 0.82rem; }
   .scorecard-head.cols-4, .scorecard-row.cols-4 { grid-template-columns: 120px 150px 150px 150px; font-size: 0.8rem; }
   .scorecard-head.cols-2, .scorecard-row.cols-2 { grid-template-columns: 110px 260px; }
