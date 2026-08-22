@@ -593,6 +593,7 @@ h1.article-title {
   .article-body { padding: 36px 0 48px; }
 
   .scorecard { overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+  .scorecard-head, .scorecard-row { width: max-content; min-width: 100%; }
   .scorecard-head, .scorecard-row { grid-template-columns: 130px 165px 165px; font-size: 0.82rem; }
   .scorecard-head.cols-4, .scorecard-row.cols-4 { grid-template-columns: 120px 150px 150px 150px; font-size: 0.8rem; }
   .scorecard-head.cols-2, .scorecard-row.cols-2 { grid-template-columns: 110px 260px; }
