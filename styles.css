@@ -115,6 +115,28 @@ img, svg { display: block; max-width: 100%; }
 
 .site-nav a:hover { color: var(--ink-on-dark); border-color: var(--turf-light); }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  flex: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink-on-dark);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-active span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -538,13 +560,45 @@ h1.article-title {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 780px) {
+  .hero { padding: 48px 0 52px; }
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-mark { max-width: 220px; order: -1; }
   .card-grid { grid-template-columns: 1fr; }
-  .scorecard-head, .scorecard-row { grid-template-columns: 1.1fr 1fr 1fr; font-size: 0.78rem; }
-  .scorecard-head.cols-4, .scorecard-row.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; font-size: 0.66rem; }
-  .scorecard-row.cols-4 > div { padding: 10px 8px; }
-  .scorecard-head.cols-2, .scorecard-row.cols-2 { grid-template-columns: 1fr 1.6fr; }
-  .site-nav { gap: 14px; }
+
+  .site-header { position: relative; padding: 20px 0 16px; }
+  .nav-toggle { display: flex; }
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--water-deep);
+    border-bottom: 1px solid var(--water-line);
+    padding: 4px 24px 16px;
+    z-index: 20;
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav a {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--water-line);
+    font-size: 0.85rem;
+  }
+
+  section.band { padding: 44px 0; }
+  .article-header { padding: 36px 0 28px; }
+  .article-body { padding: 36px 0 48px; }
+
+  .scorecard { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .scorecard-head, .scorecard-row { grid-template-columns: 130px 165px 165px; font-size: 0.82rem; }
+  .scorecard-head.cols-4, .scorecard-row.cols-4 { grid-template-columns: 120px 150px 150px 150px; font-size: 0.8rem; }
+  .scorecard-head.cols-2, .scorecard-row.cols-2 { grid-template-columns: 110px 260px; }
+  .scorecard-row > div, .scorecard-head > div { white-space: normal; }
+
+  .cta-row { flex-direction: column; }
+  .cta-row .btn { width: 100%; justify-content: center; }
+
   .verdict { flex-direction: column; }
 }

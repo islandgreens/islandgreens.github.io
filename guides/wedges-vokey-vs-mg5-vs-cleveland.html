@@ -22,6 +22,7 @@
       </svg>
       <span class="wordmark-text">Island Greens</span>
     </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="site-nav">
       <a href="golf-balls-tp5x-vs-chrome-tour-td.html">Golf Balls</a>
       <a href="wedges-vokey-vs-mg5-vs-cleveland.html">Wedges</a>
@@ -168,6 +169,17 @@
     <p class="footer-meta">© 2026 Island Greens. Built from data, not hype.</p>
   </div>
 </footer>
+<script>
+  document.querySelectorAll(".nav-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var nav = document.querySelector(".site-nav");
+      var open = nav.classList.toggle("is-open");
+      btn.classList.toggle("is-active", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+</script>
+
 
 </body>
 </html>
