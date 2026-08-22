@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Driver Guides | Island Greens</title>
+<meta name="description" content="Every driver guide on Island Greens in one place.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="wordmark">
+      <svg viewBox="0 0 100 100" class="mark" aria-hidden="true">
+        <circle cx="50" cy="52" r="47" fill="none" stroke="#2C5B60" stroke-width="1.5" opacity="0.5"/>
+        <circle cx="50" cy="52" r="36" fill="none" stroke="#2C5B60" stroke-width="1.5" opacity="0.7"/>
+        <ellipse cx="50" cy="56" rx="26" ry="19" fill="#3B6E4A"/>
+        <ellipse cx="50" cy="53" rx="20" ry="14" fill="#7BAA82" opacity="0.55"/>
+        <line x1="58" y1="48" x2="58" y2="24" stroke="#16201D" stroke-width="2" stroke-linecap="round"/>
+        <path d="M58,24 L74,29.5 L58,35 Z" fill="#C1402E"/>
+      </svg>
+      <span class="wordmark-text">Island Greens</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <a href="golf-balls.html">Golf Balls</a>
+      <a href="wedges.html">Wedges</a>
+      <a href="irons.html">Irons</a>
+      <a href="fairway-woods-qi10-vs-qi35.html">Fairway Woods</a>
+      <a href="drivers.html">Drivers</a>
+      <a href="watches-garmin-s44-vs-s50-vs-s70.html">Watches</a>
+      <a href="putter-toe-hang.html">Putters</a>
+      <a href="gloves-footjoy-vs-ua-vs-taylormade-vs-callaway.html">Gloves</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="article-header">
+  <div class="wrap">
+    <a href="../index.html" class="breadcrumb">← Island Greens</a>
+    <p class="eyebrow">Drivers</p>
+    <h1 class="article-title">Driver Guides</h1>
+    <p class="article-dek">Every driver guide on Island Greens, in one place.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="card-grid">
+      <a href="drivers-qi4d-vs-quantum-max-vs-g440k.html" class="guide-card">
+        <p class="card-kicker">Drivers</p>
+        <h3 class="card-title">Qi4D vs. Quantum Max vs. G440 K</h3>
+        <p class="card-dek">2026's three flagship drivers, plus verified PGA and LPGA tour usage checked against multiple independent sources.</p>
+        <span class="card-cta">Read the comparison →</span>
+      </a>
+
+      <a href="driver-qi10.html" class="guide-card">
+        <p class="card-kicker">Drivers</p>
+        <h3 class="card-title">TaylorMade Qi10 Driver</h3>
+        <p class="card-dek">No comparison this time, just a closer look at the 10K MOI story and what's actually inside the head.</p>
+        <span class="card-cta">Read the feature →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclosure">Island Greens is a participant in affiliate advertising programs, including the Amazon Associates program, designed to provide a means for sites to earn commissions by linking to affiliated retailers. As an Amazon Associate, Island Greens earns from qualifying purchases at no additional cost to you.</p>
+    <p class="footer-meta">© 2026 Island Greens. Built from data, not hype.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll(".nav-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var nav = document.querySelector(".site-nav");
+      var open = nav.classList.toggle("is-open");
+      btn.classList.toggle("is-active", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+</script>
+</body>
+</html>
