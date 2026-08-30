@@ -325,6 +325,11 @@ h2.band-title {
   opacity: 0.7;
 }
 
+.build-version {
+  font-size: 0.6rem;
+  opacity: 0.55;
+}
+
 /* ============================================
    GUIDE / ARTICLE PAGES
    ============================================ */
