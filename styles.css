@@ -449,6 +449,16 @@ h1.article-title {
   grid-template-columns: 1fr 2fr;
 }
 
+.scorecard-head.cols-7,
+.scorecard-row.cols-7 {
+  grid-template-columns: 0.7fr 0.8fr 0.7fr 1fr 0.9fr 0.9fr 0.9fr;
+  font-size: 0.86rem;
+}
+.scorecard-row.cols-7 > div,
+.scorecard-head.cols-7 > div {
+  padding: 10px 12px;
+}
+
 /* ---------- Verdict callout ---------- */
 
 .verdict {
@@ -597,6 +607,8 @@ h1.article-title {
   .scorecard-head, .scorecard-row { grid-template-columns: 130px 165px 165px; font-size: 0.82rem; }
   .scorecard-head.cols-4, .scorecard-row.cols-4 { grid-template-columns: 120px 150px 150px 150px; font-size: 0.8rem; }
   .scorecard-head.cols-2, .scorecard-row.cols-2 { grid-template-columns: 110px 260px; }
+  .scorecard-head.cols-7, .scorecard-row.cols-7 { grid-template-columns: 75px 85px 70px 105px 95px 95px 95px; font-size: 0.76rem; }
+  .scorecard-row.cols-7 > div, .scorecard-head.cols-7 > div { padding: 9px 10px; }
   .scorecard-row > div, .scorecard-head > div { white-space: normal; }
 
   .cta-row { flex-direction: column; }
